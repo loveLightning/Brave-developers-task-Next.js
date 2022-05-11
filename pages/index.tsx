@@ -6,7 +6,7 @@ import {
   Input,
   InputInner,
   Container,
-} from "./styles";
+} from "../styles/styles";
 import MainLayout from "../components/MainLayout";
 import Head from "next/head";
 import { SetStateAction, useEffect, useRef, useState } from "react";
