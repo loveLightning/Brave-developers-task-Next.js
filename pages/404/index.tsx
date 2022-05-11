@@ -1,16 +1,9 @@
-import styled from "styled-components";
-import { Title, Container, BackHome } from "./styles";
-import Link from 'next/link'
+import Error from '../../components/404'
 
-const Error = () => {
+const ErrorPage = () => {
   return (
-    <Container>
-      <Title>Такой страницы не существует</Title>
-      <Link href={'/'} passHref>
-          <BackHome>Вернуться на главную</BackHome>
-      </Link>
-    </Container>
+    <Error />
   );
 };
 
-export default Error;
+export default ErrorPage;
