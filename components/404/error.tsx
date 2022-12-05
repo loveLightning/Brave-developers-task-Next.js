@@ -27,9 +27,9 @@ export const Container = styled.div`
 `;
 
 export const BackHome = styled.a`
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 `;

@@ -13,12 +13,11 @@ import { useRouter } from 'next/router'
 
 export const Home = () => {
     const [value, setValue] = useState('')
-    const [name, setName] = useState(operators)
     const router = useRouter()
   
     const filteredNameOperator = useMemo(() => {
-      return name.filter((item) => item.operator.toLowerCase().includes(value.toLowerCase()))
-    }, [name, value])
+      return operators.filter((item) => item.operator.toLowerCase().includes(value.toLowerCase()))
+    }, [value])
   
   return (
     <Container>

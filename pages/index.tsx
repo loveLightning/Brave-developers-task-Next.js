@@ -1,6 +1,6 @@
 import { MainLayout } from "../components";
 import Head from "next/head";
-import { Home } from "../components/home";
+import { Home } from "../components";
 
 
 const Index: React.FC = () => {

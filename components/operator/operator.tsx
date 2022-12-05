@@ -81,10 +81,8 @@ export const Operator = () => {
     }
   }
 
-  console.log(isValid)
-
   return (
-    <MainLayout>
+    <>
       <Head>
         <title>{operators[Number(id) - 1]?.operator}</title>
       </Head>
@@ -174,6 +172,6 @@ export const Operator = () => {
 
         </Pay>
       </Container>
-    </MainLayout>
+    </>
   );
 }

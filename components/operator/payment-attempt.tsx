@@ -1,8 +1,7 @@
 import React from 'react'
-import { AnswerRequest, DescPay, ErrorPay, RepeatAttempt, SuccessPay, Title } from './styles'
+import { AnswerRequest, DescPay, ErrorPay, ImageIndicator, RepeatAttempt, SuccessPay, Title } from './styles'
 import mark from "../../public/img/mark.svg";
 import error from "../../public/img/error.svg";
-import Image from 'next/image'
 
 interface Props {
     form: boolean
@@ -23,7 +22,7 @@ export const PaymentAttempt = ({ form, dataSuccess, sendData, watchPrice }: Prop
                     {dataSuccess ?
                         <>
                             <AnswerRequest>
-                                <Image src={mark} width="100px" height="100px" alt="success"></Image>
+                                <ImageIndicator src={mark} alt="success"></ImageIndicator>
                                 <SuccessPay>Успешно оплачено</SuccessPay>
                                 <DescPay>{`${descPay} ${watchPrice}`}</DescPay>
                             </AnswerRequest>
@@ -32,7 +31,7 @@ export const PaymentAttempt = ({ form, dataSuccess, sendData, watchPrice }: Prop
                         :
                         <>
                             <AnswerRequest>
-                                <Image src={error} width="100px" height="100px" alt="error"></Image>
+                                <ImageIndicator src={error} alt="error"></ImageIndicator>
                                 <ErrorPay>Неудачная попытка</ErrorPay>
                             </AnswerRequest>
                             <RepeatAttempt onClick={sendData}>Повторить попытку</RepeatAttempt>

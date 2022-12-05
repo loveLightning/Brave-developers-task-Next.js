@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -17,8 +18,9 @@ export const Pay = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  margin-bottom: 50px;
   @media screen and (max-width: 650px) {
-    height: 538px;
+    height: 600px;
     padding: 40px 20px;
     border-radius: 5px;
   }
@@ -207,4 +209,9 @@ export const BackHomeError = styled.a`
 
 export const DescPay = styled.p`
   font-size: 16px;
+`
+
+export const ImageIndicator = styled(Image)`
+  width: 100px;
+  height: 100px;
 `

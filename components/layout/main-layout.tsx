@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../public/img/logo.svg";
+import logo from "../../public/img/logo.png";
 import { Nav, Header, HeaderLogo } from "./styles";
 import { Container } from "../styles";
 
@@ -15,11 +15,11 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Container>
           <Nav>
             <HeaderLogo>
-                <Link href="/" passHref>
-                  <a>
-                  <Image src={logo} width="45px" height="45px" priority alt="logo"></Image>
-                  </a>
-                </Link>
+              <Link href="/" passHref>
+                <a>
+                  <Image priority src={logo} width="45px" height="45px" alt="logo"></Image>
+                </a>
+              </Link>
             </HeaderLogo>
           </Nav>
         </Container>
