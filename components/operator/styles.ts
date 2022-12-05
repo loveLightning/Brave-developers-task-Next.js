@@ -8,12 +8,15 @@ export const Container = styled.div`
 
 export const Pay = styled.div`
   max-width: 1100px;
-  height: 500px;
+  height: 550px;
   box-shadow: 1px 2px 15px 7px rgba(34, 60, 80, 0.1);
   padding: 50px;
   background: white;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   @media screen and (max-width: 650px) {
     height: 538px;
     padding: 40px 20px;
@@ -77,6 +80,7 @@ export const FormError = styled.p`
   margin: 0;
   font-size: 12px;
   bottom: -17px;
+  white-space: nowrap;
 `;
 
 export const InputSubmit = styled.button`
@@ -97,9 +101,10 @@ export const InputSubmit = styled.button`
   }
 `;
 export const PayBottom = styled.div`
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: flex-end; 
   @media screen and (max-width: 650px) {
     justify-content: center;
   }
@@ -109,100 +114,11 @@ export const BackHome = styled.div`
   margin-top: 50px;
 `;
 
-export const Loading = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
 export const AnswerRequest = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-`;
-
-export const Loader = styled.div`
-  overflow: hidden;
-  font-size: 10px;
-  margin: 50px auto;
-  text-indent: -9999em;
-  width: 11em;
-  height: 11em;
-  border-radius: 50%;
-  background: #65abf8;
-  background: -moz-linear-gradient(
-    left,
-    #65abf8 10%,
-    rgba(101, 171, 248, 0) 42%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    #65abf8 10%,
-    rgba(101, 171, 248, 0) 42%
-  );
-  background: -o-linear-gradient(left, #65abf8 10%, rgba(101, 171, 248, 0) 42%);
-  background: -ms-linear-gradient(
-    left,
-    #65abf8 10%,
-    rgba(101, 171, 248, 0) 42%
-  );
-  background: linear-gradient(
-    to right,
-    #65abf8 10%,
-    rgba(101, 171, 248, 0) 42%
-  );
-  position: relative;
-  -webkit-animation: load3 1.4s infinite linear;
-  animation: load3 1.4s infinite linear;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-
-  &::before {
-    width: 50%;
-    height: 50%;
-    background: #65abf8;
-    border-radius: 100% 0 0 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-  }
-  &::after {
-    background: white;
-    width: 75%;
-    height: 75%;
-    border-radius: 50%;
-    content: "";
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-  @keyframes load3 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-`;
-
-export const BackHomesecond = styled.div`
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 `;
 
 export const LinkHomeAnim = styled.a`
@@ -289,4 +205,6 @@ export const BackHomeError = styled.a`
   }
 `
 
-
+export const DescPay = styled.p`
+  font-size: 16px;
+`

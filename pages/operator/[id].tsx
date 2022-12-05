@@ -1,10 +1,4 @@
-import { Operator } from '../../components/Operator'
-
-export async function getServerSideProps({ params }: any) {
-  return {
-    props: {},
-  };
-}
+import { Operator } from '../../components/operator'
 
 const OperatorPage: React.FC = () => {
   return (

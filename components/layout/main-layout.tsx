@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../public/img/logo.jpg";
-import { Nav, Header, Container, HeaderLogo } from "./styles";
+import logo from "../../public/img/logo.svg";
+import { Nav, Header, HeaderLogo } from "./styles";
+import { Container } from "../styles";
 
 interface MainLayoutProps {
-  children: React.ReactNode[] | React.ReactNode;
+  children: React.ReactNode;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <>
       <Header>
@@ -27,5 +28,3 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     </>
   );
 };
-
-export default MainLayout;

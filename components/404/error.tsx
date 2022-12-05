@@ -1,4 +1,17 @@
 import styled from 'styled-components'
+import Link from 'next/link'
+
+export const Error = () => {
+  return (
+    <Container>
+      <Title>Такой страницы не существует</Title>
+      <Link href={'/'} passHref>
+        <BackHome>Вернуться на главную</BackHome>
+      </Link>
+    </Container>
+  );
+};
+
 
 export const Title = styled.h1`
     position: absolute;
@@ -19,4 +32,4 @@ export const BackHome = styled.a`
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-`
+`;

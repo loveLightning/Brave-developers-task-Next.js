@@ -1,4 +1,4 @@
-import Error from '../../components/404'
+import { Error } from '../../components/404'
 
 const ErrorPage = () => {
   return (
