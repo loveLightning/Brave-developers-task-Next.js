@@ -22,7 +22,7 @@ export const PaymentAttempt = ({ form, dataSuccess, sendData, watchPrice }: Prop
                     {dataSuccess ?
                         <>
                             <AnswerRequest>
-                                <ImageIndicator src={mark} alt="success"></ImageIndicator>
+                                <ImageIndicator priority src={mark} alt="success"></ImageIndicator>
                                 <SuccessPay>Успешно оплачено</SuccessPay>
                                 <DescPay>{`${descPay} ${watchPrice}`}</DescPay>
                             </AnswerRequest>
@@ -31,7 +31,7 @@ export const PaymentAttempt = ({ form, dataSuccess, sendData, watchPrice }: Prop
                         :
                         <>
                             <AnswerRequest>
-                                <ImageIndicator src={error} alt="error"></ImageIndicator>
+                                <ImageIndicator priority src={error} alt="error"></ImageIndicator>
                                 <ErrorPay>Неудачная попытка</ErrorPay>
                             </AnswerRequest>
                             <RepeatAttempt onClick={sendData}>Повторить попытку</RepeatAttempt>
