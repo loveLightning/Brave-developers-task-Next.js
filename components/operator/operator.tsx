@@ -19,7 +19,7 @@ import { useRouter } from "next/router";
 import { operators } from "../types/types";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import { useForm, Controller } from "react-hook-form";
 import InputMask from "react-input-mask";
@@ -36,7 +36,6 @@ export const Operator = () => {
   const [loading, setLoading] = useState(false);
   const [dataSuccess, setDataSuccess] = useState(false);
   const [form, setForm] = useState(true);
-  const [sumInput, setSumInput] = useState('')
 
   const {
     setValue,
@@ -55,7 +54,7 @@ export const Operator = () => {
     }
   }
 
-  const sendData = async () => {
+  const sendData = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetch(
@@ -70,12 +69,7 @@ export const Operator = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const regularExpression = () => {
-    const regex = new RegExp(/\D/, 'g');
-    return regex;
-  };
+  }, []);
 
   const changeNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
     const price = e.target.value;
